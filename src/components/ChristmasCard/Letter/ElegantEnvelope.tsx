@@ -1,4 +1,5 @@
 // src/components/ChristmasCard/Letter/ElegantEnvelope.tsx
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
@@ -29,7 +30,7 @@ const ElegantEnvelope: React.FC<EnvelopeProps> = ({ isOpen, onOpen }) => {
        {/* 봉투 내용 */}
        <div className="relative z-10 text-center py-16 space-y-6">
          {/* 하트 장식 */}
-         <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+         <div className="absolute top-[10px] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
            <motion.div
              animate={{ scale: [1, 1.1, 1] }}
              transition={{ duration: 2, repeat: Infinity }}

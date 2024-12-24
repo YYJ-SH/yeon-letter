@@ -1,4 +1,5 @@
 // src/components/ChristmasCard/Letter/ElegantLetter.tsx
+'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -27,10 +28,10 @@ const ElegantLetter: React.FC<LetterProps> = ({
         damping: 20,
         stiffness: 100,
       }}
-      className="relative bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-2xl mx-auto max-w-2xl"
+      className="relative bg-white/90 backdrop-blur-sm rounded-xl p-8 shadow-2xl mx-auto max-w-2xl "
       style={{ transformOrigin: "top" }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-rose-100/50 to-pink-100/50 rounded-xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-rose-100/50 to-pink-100/50 rounded-xl " />
       
       <div className="relative z-10">
         {/* 컨트롤 영역 */}
@@ -55,14 +56,16 @@ const ElegantLetter: React.FC<LetterProps> = ({
         </div>
 
         {/* 사진 영역 */}
-        <div className="relative w-full h-64 mb-8 rounded-lg overflow-hidden">
-          <Image
-            src="/images/mom.png"
-            alt="Dear Mom"
-            fill
-            className="object-cover hover:scale-105 transition-transform duration-700"
-            priority
-          />
+        <div className="relative w-full mb-8 rounded-lg overflow-hidden max-h-[200px]">
+  <Image
+    src="/images/mom.png"
+    alt="Dear Mom"
+    width={400}
+    height={200}
+    className="w-full h-auto hover:scale-105 transition-transform duration-700"
+    priority
+  />
+ 
           <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
         </div>
 
@@ -72,15 +75,17 @@ const ElegantLetter: React.FC<LetterProps> = ({
             <h1 className="text-2xl font-serif text-rose-600 mb-6 text-center">
               사랑하는 엄마에게
             </h1>
+            <div className="max-h-[50vh] overflow-y-auto pr-4">
+      
             <ElegantTypewriter 
               message={`사랑하는 우리 엄마♡
 메리 크리스마스!
-예수님 오신 날, 엄마한테 편지 쓰는 예지에요~
-엄마, 나 가끔 엄마랑 티격태격하고 맘 상하게 할 때도 많았지? 내 고집대로만 하려고 하고 투정도 부리고... 
+예수님 오신 날, 같이 크리스마스를 맞이하게 되어 기뻐요.
+엄마, 나 가끔 엄마랑 티격태격하고 맘 상하게 할 때도 많았죠? 내 고집대로만 하려고 하고 투정도 부리고... 
 그래도 항상 날 이해해주시고 끝없이 사랑해주셔서 정말 고마워요. 엄마가 날 얼마나 사랑하시는지, 이제는 내가 더 잘 알 것 같아요.
 엄마도 아시죠? 성경에서 "자식들은 여호와의 기업이요 태의 열매는 그의 상급이로다" 하신 말씀처럼, 난 엄마의 상급이 되고 싶어요. 
 
-하나님이 엄마한테 주신 특별한 선물! 그래서 더 열심히 살고, 엄마 자랑스러운 딸이 되려고 노력하고 있답니다.
+하나님이 엄마한테 주신 특별한 선물! 그래서 더 열심히 살고, 엄마 자랑스러운 딸이 되려고 노력하고 있어요.
 우리 가끔 서로 생각이 달라서 부딪힐 때도 있지만, 그래도 그게 다 우리가 더 가까워지는 과정인 것 같아요. 
 엄마는 정말 잠언 31장의 현숙한 여인 그 자체! 날 위해서 평생 헌신하시고 사랑으로 키워주셨잖아요. 
 이제는 내가 엄마 어깨 좀 가볍게 해드리고 싶어요.
@@ -96,6 +101,7 @@ const ElegantLetter: React.FC<LetterProps> = ({
 엄마의 사랑둥이 딸 예지 올림`} // 편지 내용
               speed={70}
             />
+          </div>
           </div>
         )}
 
