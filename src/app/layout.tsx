@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "예지가 주는 크리스마스 편지",
-  description: "엄마 메리 크리스마스~",
+  description: "아빠 메리 크리스마스~",
 };
 
 export default function RootLayout({
