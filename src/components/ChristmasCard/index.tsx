@@ -2,7 +2,7 @@
 'use client'
 import React, { useState, useEffect, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
-import WarmBackground from './Background/WarmBackground';
+import MagicalBackground from './MagicalBackground';
 import FlowerParticles from './Background/FlowerParticles';
 import ElegantEnvelope from './Letter/ElegantEnvelope'; 
 import ElegantLetter from './Letter/ElegantLetter';
@@ -40,11 +40,11 @@ const ChristmasCard = () => {
 
   return (
     <div className="w-full h-screen flex items-center justify-center relative overflow-hidden">
-      <WarmBackground />
+      <MagicalBackground/>
       <FlowerParticles />
       
       <audio ref={audioRef} loop>
-        <source src="/music/mom.mp3" type="audio/mpeg" />
+        <source src="/music/dad.mp3" type="audio/mpeg" />
       </audio>
 
       <div className="w-full max-w-4xl mx-auto px-4 relative">
