@@ -36,7 +36,7 @@ const ElegantTypewriter: React.FC<TypewriterProps> = ({
     >
       {displayedText}
       {showCursor && currentIndex < message.length && (
-        <span className="inline-block w-0.5 h-5 bg-sky-400 ml-1 animate-blink">
+        <span className="inline-block w-0.5 h-5 bg-violet-400 ml-1 animate-blink">
         </span>
       )}
     </motion.div>

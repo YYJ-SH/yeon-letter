@@ -12,40 +12,40 @@ const LyricsPopup: React.FC<LyricsPopupProps> = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-sky-50 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 relative">
+      <div className="bg-violet-50 rounded-lg max-w-lg w-full max-h-[80vh] overflow-y-auto p-6 relative">
         <button 
           onClick={onClose}
-          className="absolute right-4 top-4 text-sky-400 hover:text-sky-600"
+          className="absolute right-4 top-4 text-violet-400 hover:text-violet-600"
         >
           <X size={24} />
         </button>
-        <h2 className="text-sky-600 font-serif text-xl mb-4">🎵 크리스마스 캐롤</h2>
+        <h2 className="text-violet-600 font-serif text-xl mb-4">🎵 크리스마스 캐롤</h2>
         <pre className="text-gray-700 font-serif whitespace-pre-wrap leading-relaxed">
-{`우리의 크리스마스 (아빠 버전)
+{`우리의 크리스마스 (예은이 버전)
 
 Verse 1:
-매일 저녁 들려주시던 기도 소리에
-잠들 때마다 속삭여주신 사랑 속에
-아버지의 온유한 미소가
-저를 지켜주었죠
+첫 만남부터 지금까지
+네 미소는 늘 같은 빛
+장난치는 언니 곁에서
+변함없이 웃어주던 너
 
 Chorus:
-저는 아빠의 자랑
-아빠는 제 기쁨
-하나님 주신 선물처럼
-우리는 서로의 축복
+넌 하나님이 준 선물
+내 인생의 가장 큰 축복
+지친 날에 기대어봐
+언니가 안아줄게
 
 Verse 2:
-힘든 시간 겪으실 때도
-한결같은 사랑으로
-저를 위해 기도하시는
-아버지의 마음
+때론 힘들어 보이는 널
+지켜보며 마음 아파도
+긴 인생의 한 페이지일 뿐
+우리 함께 이겨낼 거야
 
 Bridge:
-이제는 제가 드릴게요
-당신께 든든한 어깨를
-약속해요 아버지
-영원히 함께할게요`}
+하나님의 시간 속에
+모든 것이 아름다워질 거야
+네 옆에서 늘 기도할게
+영원한 너의 편이 될게`}
         </pre>
       </div>
     </div>
